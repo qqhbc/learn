@@ -1,10 +1,5 @@
 package com.yc;
 
-import sun.util.locale.provider.CalendarDataUtility;
-
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.temporal.WeekFields;
 import java.util.*;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
@@ -670,13 +665,8 @@ public class Main implements B, A {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        LocalDate now = LocalDate.now();
-        System.out.println(now.with(DayOfWeek.MONDAY));
-        System.out.println(WeekFields.of(Locale.CHINESE).getFirstDayOfWeek());
-        System.out.println(now.with(WeekFields.of(Locale.getDefault()).getFirstDayOfWeek()));
-        System.out.println(CalendarDataUtility.retrieveFirstDayOfWeek(Locale.US));
-        System.out.println(Locale.getDefault().getCountry());
-        System.out.println(Locale.getDefault());
+        Integer i = null;
+        System.out.println(3 == i);
 
 
     }
