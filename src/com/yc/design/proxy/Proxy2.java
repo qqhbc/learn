@@ -24,7 +24,7 @@ public class Proxy2 implements Subject {
         System.out.println("doAfter");
     }
 
-    private static class RealSubject2 implements Subject{
+    private static class RealSubject2 implements Subject {
         private final String name;
 
         public RealSubject2(Subject subject, String name) {

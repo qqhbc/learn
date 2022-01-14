@@ -7,6 +7,7 @@ import java.lang.reflect.Proxy;
 interface Advice {
     void exec();
 }
+
 class BeforeAdvice implements Advice {
 
     @Override
@@ -14,6 +15,7 @@ class BeforeAdvice implements Advice {
         System.out.println("before advice");
     }
 }
+
 class AfterAdvice implements Advice {
 
     @Override
@@ -34,14 +36,17 @@ class MyInvocationHandler implements InvocationHandler {
 
         // 前置触发条件
         if (true) {
-            new BeforeAdvice().exec();
+            Advice beforeAdvice = new BeforeAdvice();
+            beforeAdvice.exec();
         }
         System.out.println("=================================");
         Object invoke = method.invoke(object, args);
         System.out.println("=================================");
         // 后置触发条件
         if (true) {
-            new AfterAdvice().exec();
+            Advice afterAdvice = new AfterAdvice();
+            afterAdvice.exec();
+
         }
 
         return invoke;
@@ -50,7 +55,7 @@ class MyInvocationHandler implements InvocationHandler {
 
 
 public class DynamicProxy {
-    public static <T> T newProxyInstance(ClassLoader classLoader, Class<?>[] interfaces, InvocationHandler invocationHandler ) {
+    public static <T> T newProxyInstance(ClassLoader classLoader, Class<?>[] interfaces, InvocationHandler invocationHandler) {
         return (T) Proxy.newProxyInstance(classLoader, interfaces, invocationHandler);
     }
 }
