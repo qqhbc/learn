@@ -1,4 +1,4 @@
-package com.yc.adapter;
+package com.yc.design.adapter;
 
 class AdapteeExtend {
     public void specificRequest() {
