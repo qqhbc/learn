@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Person {
+public class PersonVO {
     private String name;
     private Integer age;
     private LocalDate birthday;
