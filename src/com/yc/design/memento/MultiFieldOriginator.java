@@ -100,8 +100,5 @@ class MultiFieldClient {
         System.out.println("===================恢复变更状态===================");
         multiFieldOriginator.restoreMultiFieldMemento(caretaker.getMultiFieldMemento(changeIdx));
         System.out.println(multiFieldOriginator);
-
-
-
     }
 }
