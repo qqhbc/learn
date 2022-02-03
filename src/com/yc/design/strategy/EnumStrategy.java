@@ -9,13 +9,13 @@ public enum EnumStrategy {
     STRATEGY_1("1") {
         @Override
         public void doSomething() {
-            System.out.println("strategy_1 doSomething");
+            System.out.println("strategy_1 doSomething " + this.getMsg());
         }
     },
     STRATEGY_2("2") {
         @Override
         public void doSomething() {
-            System.out.println("strategy_2 doSomething");
+            System.out.println("strategy_2 doSomething " + this.getMsg());
         }
     },
     ;
