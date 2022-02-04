@@ -152,9 +152,12 @@ class Client {
         Context context = new Context();
         context.setLiftState(Context.closingState);
 
+        context.stop();
         context.open();
         context.close();
         context.run();
+        // 运行期间 不能开门 因此什么都不做
+        context.open();
         context.stop();
     }
 }
