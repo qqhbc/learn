@@ -1,9 +1,15 @@
 package com.yc.design.adapter;
 
+/**
+ * 已存在的目标对象
+ */
 interface Target {
     void request();
 }
 
+/**
+ * 源角色也存在
+ */
 class Adaptee {
     public void specificRequest() {
         System.out.println("specificRequest");

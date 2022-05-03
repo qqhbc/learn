@@ -31,8 +31,8 @@ public class ForceProxy implements ForceSubject{
 
     private final ForceSubject forceRealSubject;
 
-    public ForceProxy(ForceSubject forceSubject) {
-        this.forceRealSubject = forceSubject;
+    public ForceProxy(ForceSubject forceRealSubject) {
+        this.forceRealSubject = forceRealSubject;
     }
 
     @Override

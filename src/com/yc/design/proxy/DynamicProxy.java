@@ -25,9 +25,9 @@ class AfterAdvice implements Advice {
 }
 
 class MyInvocationHandler implements InvocationHandler {
-    private final Object object;
+    private final Subject object;
 
-    public MyInvocationHandler(Object object) {
+    public MyInvocationHandler(Subject object) {
         this.object = object;
     }
 

@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 class Context {
-    public static final ClosingState closingState = new ClosingState();
-    public static final OpeningState openingState = new OpeningState();
-    public static final RunningState runningState = new RunningState();
-    public static final StoppingState stoppingState = new StoppingState();
+    public static final LiftState closingState = new ClosingState();
+    public static final LiftState openingState = new OpeningState();
+    public static final LiftState runningState = new RunningState();
+    public static final LiftState stoppingState = new StoppingState();
 
     private LiftState liftState;
 
@@ -88,6 +88,7 @@ class RunningState extends LiftState {
     @Override
     public void open() {
         // do nothing
+        System.out.println("运行中 不能开门 ");
     }
 
     @Override

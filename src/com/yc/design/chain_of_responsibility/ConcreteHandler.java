@@ -114,18 +114,18 @@ class Client {
         Handler handler2 = new ConcreteHandler2();
         handler.setNext(handler1);
         handler1.setNext(handler2);
-        System.out.println(handler.handlerMessage(request));
+        System.out.println("request: "+ handler.handlerMessage(request));
         System.out.println("==================================================");
 
         Request request1 = new Request(new Level(1), "request1");
-        System.out.println(handler.handlerMessage(request1));
+        System.out.println("request1: "+ handler.handlerMessage(request1));
         System.out.println("===================================================");
 
         Request request2 = new Request(new Level(2), "request2");
-        System.out.println(handler.handlerMessage(request2));
+        System.out.println("request2: "+ handler.handlerMessage(request2));
         System.out.println("===================================================");
 
         Request request3 = new Request(new Level(3), "request3");
-        System.out.println(handler.handlerMessage(request3));
+        System.out.println("request3: "+ handler.handlerMessage(request3));
     }
 }
