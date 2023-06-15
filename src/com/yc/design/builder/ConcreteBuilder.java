@@ -2,7 +2,7 @@ package com.yc.design.builder;
 
 /**
  * 建造者模式</br>
- * <strong>侧重点在于零件的装配、顺序；而工厂方法模式侧重点在于创建</strong>
+ * <strong>侧重点在于零件的装配、顺序，可以在生成对象时作必要的参数校验(.build()处)；而工厂方法模式侧重点在于创建，直接在构造方法中创建对象</strong>
  */
 class Product {
     private String name;
